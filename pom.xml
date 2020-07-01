@@ -24,7 +24,7 @@
     <!-- struts2 -->
     <struts2.version>2.5.1</struts2.version>
     <!-- log4j -->
-    <log4j.version>2.5</log4j.version>
+    <log4j.version>2.13.3</log4j.version>
   </properties>
 
   <dependencies>
