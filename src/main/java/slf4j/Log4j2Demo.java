@@ -9,8 +9,9 @@ import org.apache.logging.log4j.Logger;
  * @since 2021/8/4
  */
 public class Log4j2Demo {
-    private static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
-
+    //选择使用的日志等级策略
+//    private static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
+    private static Logger logger = LogManager.getLogger("slf4j");
     public static void main(String[] args) {
         logger.trace("trace level");
         logger.debug("debug level");

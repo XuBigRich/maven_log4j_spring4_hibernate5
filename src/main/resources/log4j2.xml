@@ -95,7 +95,12 @@
     </Appenders>
     <!--切换输出级别-->
     <Loggers>
+        <!--让slf4j 这个包下的日志级别为 ,但前提是日志加载器选择使用这个日志策略-->
+        <logger name="slf4j" level="info" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
         <!--  使用rootLogger配置日志级别，日志级别level="info"  -->
+        <!--root 是所有logger的父类-->
         <Root level="all">
             <!--指定日志使用的处理器-->
             <AppenderRef ref="Console"/>
