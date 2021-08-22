@@ -96,7 +96,8 @@
     <!--切换输出级别-->
     <Loggers>
         <!--让slf4j 这个包下的日志级别为 ,但前提是日志加载器选择使用这个日志策略-->
-        <logger name="slf4j" level="info" additivity="false">
+        <!--所有的logger都将继承自root的配置 ，输出时的等级是按照最小级别去输出的-->
+        <logger name="slf4j" level="off" additivity="true">
             <appender-ref ref="Console"/>
         </logger>
         <!--  使用rootLogger配置日志级别，日志级别level="info"  -->
