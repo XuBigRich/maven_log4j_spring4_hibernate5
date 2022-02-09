@@ -20,7 +20,7 @@
     <!-- spring版本号 -->
     <spring.version>4.3.0.RELEASE</spring.version>
     <!-- Hibernate -->
-    <org.hibernate-version>5.2.0.Final</org.hibernate-version>
+    <org.hibernate-version>5.4.24.Final</org.hibernate-version>
     <!-- struts2 -->
     <struts2.version>2.5.1</struts2.version>
     <!-- slf4j -->
