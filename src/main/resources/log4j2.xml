@@ -105,18 +105,22 @@
     <Loggers>
         <!--让slf4j 这个包下的日志级别为 ,但前提是日志加载器选择使用这个日志策略-->
         <!--所有的logger都将继承自root的配置 ，输出时的等级是按照最小级别去输出的-->
-        <logger name="slf4j" level="off" additivity="true">
-            <appender-ref ref="Console"/>
+        <logger name="slf4j" level="debug" additivity="true">
+            <!--使用那些策略去输出日志文件-->
+            <AppenderRef ref="debug"/>
+            <AppenderRef ref="Console"/>
         </logger>
+        <!--像是这样如果子日志加载器 不填写 AppenderRef，那么将继承 root的 AppenderRef-->
+        <logger name="slf4j" level="debug" additivity="true"/>
         <!--  使用rootLogger配置日志级别，日志级别level="info"  -->
         <!--root 是所有logger的父类-->
-        <Root level="all">
-            <!--指定日志使用的处理器-->
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="debug"/>
-            <AppenderRef ref="info"/>
-            <AppenderRef ref="warn"/>
-            <AppenderRef ref="error"/>
-        </Root>
+<!--        <Root level="all">-->
+<!--            &lt;!&ndash;指定日志使用的处理器&ndash;&gt;-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--            <AppenderRef ref="debug"/>-->
+<!--            <AppenderRef ref="info"/>-->
+<!--            <AppenderRef ref="warn"/>-->
+<!--            <AppenderRef ref="error"/>-->
+<!--        </Root>-->
     </Loggers>
 </Configuration>
