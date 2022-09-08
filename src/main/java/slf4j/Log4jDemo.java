@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
  * @author 许鸿志
  * @since 2021/8/4
  */
-public class Log4jDemo {
+public class  Log4jDemo {
     private static Logger logger = Logger.getLogger(Log4jDemo.class);
 
     public static void main(String[] args) {
