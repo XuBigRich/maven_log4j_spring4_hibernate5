@@ -25,6 +25,8 @@
                 <TimeFilter start="08:00:00" end="08:30:00" onMatch="ACCEPT" onMismatch="DENY" />
             </Filters>
             <!--  日志消息格式  -->
+            <!-- 格式化输出：%date表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度 %msg：日志消息，%n是换行符-->
+            <!-- %logger/%c{36} 表示 Logger 名字最长36个字符(与文档有异议) -->
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss:SSS}] [%5level] %l %c{36} - %msg%n"/>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
